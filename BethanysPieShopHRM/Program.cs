@@ -6,7 +6,8 @@ namespace BethanysPieShopHRM
     {
         static void Main(string[] args)
         {
-            int bonus = 1000;
+            int monthlyWage = 1234;
+            int months = 12, bonus = 1000;
 
             bool isActive = true;
             double rating = 99.25;
