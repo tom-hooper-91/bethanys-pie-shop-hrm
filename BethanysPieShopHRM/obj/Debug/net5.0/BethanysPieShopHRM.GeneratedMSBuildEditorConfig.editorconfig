@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = BethanysPieShopHRM
-build_property.ProjectDir = C:\Users\tomwb\workspace\BethanysPieShopHRM\BethanysPieShopHRM\
+build_property.ProjectDir = /Users/tomhooper/workspace/bethanys-pie-shop-hrm/BethanysPieShopHRM/
