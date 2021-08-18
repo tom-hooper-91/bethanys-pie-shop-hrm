@@ -4,18 +4,115 @@ namespace BethanysPieShopHRM
     public class Employee
     {
         // Fields
-        public string firstName;
-        public string lastName;
-        public string email;
+        private string firstName;
+        private string lastName;
+        private string email;
+        
+        private int numberOfHoursWorked;
+        private double wage;
+        private double hourlyRate;
+        private DateTime birthDay;
+        
+        private EmployeeType employeeType;
 
-        public int numberOfHoursWorked;
-        public double wage;
-        public double hourlyRate;
-        public DateTime birthDay;
+        // Properties
+        public string FirstName
+        {
+            get
+            {
+                return firstName;
+            }
+            set
+            {
+                firstName = value;// value is a keyword that is built into properties
+            }
+        }
 
-        public EmployeeType employeeType;
+        public string LastName
+        {
+            get
+            {
+                return lastName;
+            }
+            set
+            {
+                lastName = value;
+            }
+        }
 
-        //Constructors
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+            set
+            {
+                email = value;
+            }
+        }
+
+        public int NumberOfHoursWorked
+        {
+            get
+            {
+                return numberOfHoursWorked;
+            }
+            set
+            {
+                numberOfHoursWorked = value;
+            }
+        }
+
+        public double Wage
+        {
+            get
+            {
+                return wage;
+            }
+            set
+            {
+                wage = value;
+            }
+        }
+
+        public double HourlyRate
+        {
+            get
+            {
+                return hourlyRate;
+            }
+            set
+            {
+                hourlyRate = value;
+            }
+        }
+
+        public DateTime BirthDay
+        {
+            get
+            {
+                return birthDay;
+            }
+            set
+            {
+                birthDay = value;
+            }
+        }
+
+        public EmployeeType EmployeeType
+        {
+            get
+            {
+                return employeeType;
+            }
+            set
+            {
+                employeeType = value;
+            }
+        }
+
+        // Constructors
         public Employee(string first, string last, string em, DateTime bd, EmployeeType empType, double rate)
         {
             firstName = first;
@@ -30,7 +127,7 @@ namespace BethanysPieShopHRM
         {
         }
 
-        //Methods
+        // Methods
         public void PerformWork()
         {
             numberOfHoursWorked++;
