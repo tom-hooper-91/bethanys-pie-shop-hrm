@@ -3,6 +3,7 @@ namespace BethanysPieShopHRM
 {
     public class Employee
     {
+        // Fields
         public string firstName;
         public string lastName;
         public string email;
@@ -14,6 +15,22 @@ namespace BethanysPieShopHRM
 
         public EmployeeType employeeType;
 
+        //Constructors
+        public Employee(string first, string last, string em, DateTime bd, EmployeeType empType, double rate)
+        {
+            firstName = first;
+            lastName = last;
+            email = em;
+            birthDay = bd;
+            employeeType = empType;
+            hourlyRate = rate;
+        }
+
+        public Employee(string first, string last, string em, DateTime bd, EmployeeType empType) : this(first, last, em, bd, empType, 0) // calls the first constructor using 'this'
+        {
+        }
+
+        //Methods
         public void PerformWork()
         {
             numberOfHoursWorked++;
@@ -40,11 +57,5 @@ namespace BethanysPieShopHRM
             Console.WriteLine($"\nFirst Name: {firstName}\nLast Name: {lastName}\nEmail: {email}\nBirthday: {birthDay}\nEmployee Type: {employeeType}\n");
         }
 
-
-
-
-        public Employee()
-        {
-        }
     }
 }
