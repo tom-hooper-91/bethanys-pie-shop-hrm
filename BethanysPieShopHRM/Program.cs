@@ -6,43 +6,56 @@ namespace BethanysPieShopHRM
     {
         static void Main(string[] args)
         {
-            int monthlyWage = 1234;
-            int monthsWorked = 12;
-            int bonus = 1000;
-
-            int yearlyWage = CalculateYearlyWage(monthlyWage, monthsWorked);
-
-            Console.WriteLine($"Yearly Wage is : ${yearlyWage}");
-
-            double monthlyWageDouble = 1234.0;
-            double monthsWorkedDouble = 12.0;
-            double bonusDouble = 1000.0;
-
-            double yearlyWageDouble = CalculateYearlyWage(monthlyWageDouble, monthsWorkedDouble, bonusDouble);
+            UsingEnumerations();
 
             Console.ReadLine();
+
         }
 
-        public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked)
+        private static void UsingEnumerations()
         {
-            if (numberOfMonthsWorked == 12)
+            EmployeeType employeeType = EmployeeType.Manager;
+            StoreType storeType = StoreType.Seating;
+            int baseWage = 1000;
+
+            CalculateWage(baseWage, employeeType, storeType);
+        }
+
+        private static void CalculateWage(int baseWage, EmployeeType employeeType, StoreType storeType)
+        {
+            int calculatedWage = 0;
+
+            if (employeeType == EmployeeType.Manager)
             {
-                return monthlyWage * (numberOfMonthsWorked + 1); // Add's a bonus month if they have worked all year
+                calculatedWage = baseWage * 3;
+            }
+            else
+            {
+                calculatedWage *= 2;
             }
 
-            return monthlyWage * numberOfMonthsWorked;
+            if (storeType == StoreType.FullPieResteraunt)
+            {
+                calculatedWage += 500;
+            }
+
+            Console.WriteLine($"Calculate Wage is : ${calculatedWage}");
         }
 
-        public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, int bonus)
+        enum EmployeeType
         {
-            Console.WriteLine($"The Yearly Wage is : ${monthlyWage * numberOfMonthsWorked + bonus}");
-            return monthlyWage * numberOfMonthsWorked + bonus;
+            Sales,// 0
+            Manager,// 1
+            Research,// 2
+            StoreManager// 3
         }
 
-        public static double CalculateYearlyWage(double monthlyWage, double numberOfMonthsWorked, double bonus)
+        enum StoreType
         {
-            Console.WriteLine($"The Yearly Wage is : ${monthlyWage * numberOfMonthsWorked + bonus}");
-            return monthlyWage * numberOfMonthsWorked + bonus;
+            PieCorner = 10,
+            Seating = 20,
+            FullPieResteraunt = 100,
+            Undefined = 99
         }
     }
 }
