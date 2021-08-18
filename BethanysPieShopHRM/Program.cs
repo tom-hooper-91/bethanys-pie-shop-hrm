@@ -6,11 +6,33 @@ namespace BethanysPieShopHRM
     {
         static void Main(string[] args)
         {
-            UsingEnumerations();
+            //UsingEnumerations();
+
+            UsingStruct();
 
             Console.ReadLine();
 
         }
+
+        private static void UsingStruct()
+        {
+            Employee employee;
+            employee.Name = "Bethany";
+            employee.Wage = 1250;
+            employee.Work();
+        } 
+
+        struct Employee
+        {
+            public string Name;
+            public int Wage;
+
+            public void Work()
+            {
+                Console.WriteLine($"{Name} is doing some work");
+            }
+        }
+
 
         private static void UsingEnumerations()
         {
