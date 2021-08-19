@@ -10,7 +10,7 @@ namespace BethanysPieShopHRM.HR
         
         private int numberOfHoursWorked;
         private double wage;
-        private double hourlyRate;
+        private double? hourlyRate;// suffixing varibale with ? allows value to be null, useful for DB interactions where value may not be known
         private DateTime birthDay;
         
         private EmployeeType employeeType;
@@ -86,7 +86,7 @@ namespace BethanysPieShopHRM.HR
             }
         }
 
-        public double HourlyRate
+        public double? HourlyRate
         {
             get
             {
@@ -123,7 +123,7 @@ namespace BethanysPieShopHRM.HR
         }
 
         // Constructors
-        public Employee(string first, string last, string em, DateTime bd, EmployeeType empType, double rate)
+        public Employee(string first, string last, string em, DateTime bd, EmployeeType empType, double? rate)
         {
             FirstName = first;
             LastName = last;
@@ -152,7 +152,7 @@ namespace BethanysPieShopHRM.HR
 
         public double RecieveWage()
         {
-            double wageBeforeTax = NumberOfHoursWorked * HourlyRate;
+            double wageBeforeTax = (double)(NumberOfHoursWorked * HourlyRate);// conversion used because HourlyRate could be null
             double taxAmount = wageBeforeTax * taxRate;
 
             Wage = wageBeforeTax - taxAmount;
