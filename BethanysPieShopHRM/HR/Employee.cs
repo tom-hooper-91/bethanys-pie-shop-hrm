@@ -15,7 +15,8 @@ namespace BethanysPieShopHRM.HR
         
         private EmployeeType employeeType;
 
-        public static double taxRate = 0.15;
+        public static double taxRate = 0.15;// static variable declared at class level
+        public const double maxAmountOfHoursWorked = 1000;// constant variable that will never change, static by default
 
         // Properties
         public string FirstName
