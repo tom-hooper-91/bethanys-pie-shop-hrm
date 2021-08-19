@@ -130,7 +130,7 @@ namespace BethanysPieShopHRM.HR
             Email = em;
             BirthDay = bd;
             EmployeeType = empType;
-            HourlyRate = rate;
+            HourlyRate = rate ?? 10;// if value is null use value on right of ??
         }
 
         public Employee(string first, string last, string em, DateTime bd, EmployeeType empType) : this(first, last, em, bd, empType, 0) // calls the first constructor using 'this'
@@ -152,7 +152,7 @@ namespace BethanysPieShopHRM.HR
 
         public double RecieveWage()
         {
-            double wageBeforeTax = (double)(NumberOfHoursWorked * HourlyRate);// conversion used because HourlyRate could be null
+            double wageBeforeTax = NumberOfHoursWorked * HourlyRate.Value;// value used because HourlyRate could be null
             double taxAmount = wageBeforeTax * taxRate;
 
             Wage = wageBeforeTax - taxAmount;
