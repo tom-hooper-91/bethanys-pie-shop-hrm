@@ -13,8 +13,6 @@ namespace BethanysPieShopHRM.HR
         private double? hourlyRate;// suffixing varibale with ? allows value to be null, useful for DB interactions where value may not be known
         private DateTime birthDay;
         
-        private EmployeeType employeeType;
-
         public static double taxRate = 0.15;// static variable declared at class level
         public const double maxAmountOfHoursWorked = 1000;// constant variable that will never change, static by default
 
@@ -110,30 +108,17 @@ namespace BethanysPieShopHRM.HR
             }
         }
 
-        public EmployeeType EmployeeType
-        {
-            get
-            {
-                return employeeType;
-            }
-            set
-            {
-                employeeType = value;
-            }
-        }
-
         // Constructors
-        public Employee(string first, string last, string em, DateTime bd, EmployeeType empType, double? rate)
+        public Employee(string first, string last, string em, DateTime bd, double? rate)
         {
             FirstName = first;
             LastName = last;
             Email = em;
             BirthDay = bd;
-            EmployeeType = empType;
             HourlyRate = rate ?? 10;// if value is null use value on right of ??
         }
 
-        public Employee(string first, string last, string em, DateTime bd, EmployeeType empType) : this(first, last, em, bd, empType, 0) // calls the first constructor using 'this'
+        public Employee(string first, string last, string em, DateTime bd) : this(first, last, em, bd, 0) // calls the first constructor using 'this'
         {
         }
 
@@ -165,7 +150,7 @@ namespace BethanysPieShopHRM.HR
 
         public void DisplayEmployeeDetails()
         {
-            Console.WriteLine($"\nFirst Name: {FirstName}\nLast Name: {LastName}\nEmail: {Email}\nBirthday: {BirthDay}\nEmployee Type: {EmployeeType}\nTax Rate: {taxRate}\n");
+            Console.WriteLine($"\nFirst Name: {FirstName}\nLast Name: {LastName}\nEmail: {Email}\nBirthday: {BirthDay}\nTax Rate: {taxRate}\n");
         }
 
         public static void DisplayTaxRate()// static method can only use static data

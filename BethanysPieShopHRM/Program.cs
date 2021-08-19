@@ -12,9 +12,9 @@ namespace BethanysPieShopHRM
             Console.WriteLine("Creating an employee");
             Console.WriteLine("--------------------\n");
 
-            Employee bethany = new Employee("Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), EmployeeType.Manager, 25);
+            Employee bethany = new Employee("Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
 
-            Employee george = new Employee("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), EmployeeType.Research, 30);
+            Employee george = new Employee("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), 30);
 
             bethany.HourlyRate = 50; // use properties to update values
             bethany.NumberOfHoursWorked = 100;
