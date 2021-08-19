@@ -15,6 +15,8 @@ namespace BethanysPieShopHRM.HR
         
         private EmployeeType employeeType;
 
+        public static double taxRate = 0.15;
+
         // Properties
         public string FirstName
         {
@@ -149,8 +151,12 @@ namespace BethanysPieShopHRM.HR
 
         public double RecieveWage()
         {
-            Wage = NumberOfHoursWorked * HourlyRate;
-            Console.WriteLine($"The wage for {NumberOfHoursWorked} is {Wage}.");
+            double wageBeforeTax = NumberOfHoursWorked * HourlyRate;
+            double taxAmount = wageBeforeTax * taxRate;
+
+            Wage = wageBeforeTax - taxAmount;
+
+            Console.WriteLine($"The wage for {NumberOfHoursWorked} hours worked is {Wage}.");
             NumberOfHoursWorked = 0;
 
             return Wage;
@@ -158,7 +164,12 @@ namespace BethanysPieShopHRM.HR
 
         public void DisplayEmployeeDetails()
         {
-            Console.WriteLine($"\nFirst Name: {FirstName}\nLast Name: {LastName}\nEmail: {Email}\nBirthday: {BirthDay}\nEmployee Type: {EmployeeType}\n");
+            Console.WriteLine($"\nFirst Name: {FirstName}\nLast Name: {LastName}\nEmail: {Email}\nBirthday: {BirthDay}\nEmployee Type: {EmployeeType}\nTax Rate: {taxRate}\n");
+        }
+
+        public static void DisplayTaxRate()// static method can only use static data
+        {
+            Console.WriteLine($"The current tax rate is {taxRate}");
         }
 
     }

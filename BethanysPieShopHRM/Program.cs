@@ -7,6 +7,8 @@ namespace BethanysPieShopHRM
     {
         static void Main(string[] args)
         {
+            Employee.DisplayTaxRate();// static method caled on the class not the object
+
             Console.WriteLine("Creating an employee");
             Console.WriteLine("--------------------\n");
 
@@ -18,6 +20,7 @@ namespace BethanysPieShopHRM
             bethany.NumberOfHoursWorked = 100;
             bethany.Wage = -10; // this will default to 0 when property is invoked
 
+            #region First run Bethany
 
             bethany.DisplayEmployeeDetails();
             bethany.PerformWork();
@@ -26,12 +29,18 @@ namespace BethanysPieShopHRM
             bethany.PerformWork();
             bethany.RecieveWage();
 
+            #endregion
+
+            #region First run George
+
             george.DisplayEmployeeDetails();
             george.PerformWork();
             george.PerformWork();
             george.PerformWork();
             george.PerformWork();
             george.RecieveWage();
+
+            #endregion
 
             Customer customer = new Customer();
 
