@@ -50,6 +50,11 @@ namespace BethanysPieShopHRM
 
             mary.AttendManagementMeeting();
 
+            JuniorResearcher bobJunior = new JuniorResearcher("Bob", "Spencer", "bob@snowball.be", new DateTime(1988, 1, 23), 17);
+
+            bobJunior.ResearchNewPieTastes(10);
+            bobJunior.RecieveWage();
+
             Console.ReadLine();
         }
     }

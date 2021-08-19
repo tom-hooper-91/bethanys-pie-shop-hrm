@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{D5C035D0-2844-48E3-87AE-0A28E9906205}|Default">
   <MonoDevelop.Ide.ItemProperties.BethanysPieShopHRM PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HR/Manager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HR/StoreManager.cs">
     <Files>
-      <File FileName="Program.cs" Line="15" Column="102" />
+      <File FileName="Program.cs" Line="51" Column="44" />
       <File FileName="HR/Employee.cs" Line="121" Column="74" />
-      <File FileName="HR/Manager.cs" Line="4" Column="36" />
+      <File FileName="HR/Manager.cs" Line="6" Column="90" />
+      <File FileName="HR/Developer.cs" Line="6" Column="91" />
+      <File FileName="HR/StoreManager.cs" Line="6" Column="96" />
+      <File FileName="HR/Researcher.cs" Line="6" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +16,7 @@
             <Node name="BethanysPieShopHRM" expanded="True">
               <Node name="Accounting" expanded="True" />
               <Node name="HR" expanded="True">
-                <Node name="Manager.cs" selected="True" />
+                <Node name="StoreManager.cs" selected="True" />
               </Node>
             </Node>
           </Node>
