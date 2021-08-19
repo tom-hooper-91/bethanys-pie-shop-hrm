@@ -14,35 +14,37 @@ namespace BethanysPieShopHRM
 
             Employee bethany = new Employee("Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
 
-            Employee george = new Employee("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), 30);
+            //Employee george = new Employee("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), 30);
 
-            bethany.HourlyRate = 50; // use properties to update values
-            bethany.NumberOfHoursWorked = 100;
-            bethany.Wage = -10; // this will default to 0 when property is invoked
+            //bethany.HourlyRate = 50; // use properties to update values
+            //bethany.NumberOfHoursWorked = 100;
+            //bethany.Wage = -10; // this will default to 0 when property is invoked
 
-            #region First run Bethany
+            //#region First run Bethany
 
-            bethany.DisplayEmployeeDetails();
-            bethany.PerformWork();
-            bethany.PerformWork();
-            bethany.PerformWork();
-            bethany.PerformWork();
-            bethany.RecieveWage();
+            //bethany.DisplayEmployeeDetails();
+            //bethany.PerformWork();
+            //bethany.PerformWork();
+            //bethany.PerformWork();
+            //bethany.PerformWork();
+            //bethany.RecieveWage();
 
-            #endregion
+            //#endregion
 
-            #region First run George
+            //#region First run George
 
-            george.DisplayEmployeeDetails();
-            george.PerformWork();
-            george.PerformWork();
-            george.PerformWork();
-            george.PerformWork();
-            george.RecieveWage();
+            //george.DisplayEmployeeDetails();
+            //george.PerformWork();
+            //george.PerformWork();
+            //george.PerformWork();
+            //george.PerformWork();
+            //george.RecieveWage();
 
-            #endregion
+            //#endregion
 
-            Customer customer = new Customer();
+            //Customer customer = new Customer();
+
+            Manager mary = new Manager("Mary", "Jones", "mary@snowball.be", new DateTime(1965, 1, 16), 30);
 
             Console.ReadLine();
         }
