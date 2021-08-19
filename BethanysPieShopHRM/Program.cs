@@ -46,6 +46,10 @@ namespace BethanysPieShopHRM
 
             Manager mary = new Manager("Mary", "Jones", "mary@snowball.be", new DateTime(1965, 1, 16), 30);
 
+            mary.DisplayEmployeeDetails();
+
+            mary.AttendManagementMeeting();
+
             Console.ReadLine();
         }
     }
