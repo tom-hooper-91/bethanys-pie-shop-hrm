@@ -5,4 +5,12 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="HR\" />
+    <None Remove="Accounting\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HR\" />
+    <Folder Include="Accounting\" />
+  </ItemGroup>
 </Project>

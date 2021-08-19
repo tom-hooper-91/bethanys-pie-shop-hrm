@@ -1,20 +1,28 @@
 ﻿<Properties StartupConfiguration="{D5C035D0-2844-48E3-87AE-0A28E9906205}|Default">
   <MonoDevelop.Ide.ItemProperties.BethanysPieShopHRM PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Employee.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Accounting/Customer.cs">
     <Files>
-      <File FileName="Program.cs" Line="17" Column="97" />
-      <File FileName="Employee.cs" Line="20" Column="11" />
+      <File FileName="Program.cs" Line="2" Column="29" />
+      <File FileName="Employee.cs" Line="14" Column="35" />
+      <File FileName="HR/EmployeeType.cs" Line="10" Column="2" />
+      <File FileName="Accounting/Account.cs" Line="12" Column="40" />
+      <File FileName="Accounting/Customer.cs" Line="7" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BethanysPieShopHRM" expanded="True">
             <Node name="BethanysPieShopHRM" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Employee.cs" selected="True" />
+              <Node name="Accounting" expanded="True">
+                <Node name="Customer.cs" selected="True" />
+              </Node>
+              <Node name="HR" expanded="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

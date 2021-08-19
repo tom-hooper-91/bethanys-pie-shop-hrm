@@ -1,5 +1,5 @@
 ﻿using System;
-namespace BethanysPieShopHRM
+namespace BethanysPieShopHRM.HR
 {
     public class Employee
     {
