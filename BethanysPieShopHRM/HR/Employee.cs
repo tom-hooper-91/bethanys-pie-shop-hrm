@@ -158,5 +158,10 @@ namespace BethanysPieShopHRM.HR
             Console.WriteLine($"The current tax rate is {taxRate}");
         }
 
+        public virtual void GiveBonus()// the virtual keyword allows for polymorphism on inherited classes
+        {
+            Console.WriteLine($"{FirstName} {LastName} recieves a generic bonus of $100!");
+        }
+
     }
 }
