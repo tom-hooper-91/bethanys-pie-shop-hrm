@@ -3,7 +3,7 @@ namespace BethanysPieShopHRM.HR
 {
     public class Manager : Employee
     {
-        public Manager (string first, string last, string em, DateTime bd, double? rate) : base(first, last, em, bd, rate)// base ivokes the base constructor Employee
+        public Manager (int id, string first, string last, string em, DateTime bd, double? rate) : base(id, first, last, em, bd, rate)// base ivokes the base constructor Employee
         {
         }
 
@@ -25,15 +25,15 @@ namespace BethanysPieShopHRM.HR
         {
             {
                 double wageBeforeTax = NumberOfHoursWorked * 2 * HourlyRate.Value;// value used because HourlyRate could be null
-                double taxAmount = wageBeforeTax * taxRate;
+        double taxAmount = wageBeforeTax * taxRate;
 
-                Wage = wageBeforeTax - taxAmount;
+        Wage = wageBeforeTax - taxAmount;
 
                 Console.WriteLine($"The wage for {NumberOfHoursWorked} hours worked is {Wage}.");
                 NumberOfHoursWorked = 0;
 
                 return Wage;
             }
-        }
+}
     }
 }

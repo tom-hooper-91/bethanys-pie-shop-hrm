@@ -1,7 +1,7 @@
 ﻿using System;
 namespace BethanysPieShopHRM.HR
 {
-    public class Employee : IEmployee
+    public class Employee : IEmployee, IComparable
     {
         // Fields
         private int id;
@@ -119,7 +119,7 @@ namespace BethanysPieShopHRM.HR
         }
 
         // Constructors
-        public Employee(string first, string last, string em, DateTime bd, double? rate)
+        public Employee(int id, string first, string last, string em, DateTime bd, double? rate)
         {
             FirstName = first;
             LastName = last;
@@ -128,7 +128,7 @@ namespace BethanysPieShopHRM.HR
             HourlyRate = rate ?? 10;// if value is null use value on right of ??
         }
 
-        public Employee(string first, string last, string em, DateTime bd) : this(first, last, em, bd, 0) // calls the first constructor using 'this'
+        public Employee(int id, string first, string last, string em, DateTime bd) : this(id, first, last, em, bd, 0) // calls the first constructor using 'this' passes 0 to rate
         {
         }
 
@@ -145,7 +145,7 @@ namespace BethanysPieShopHRM.HR
             Console.WriteLine($"{FirstName} {LastName} has stopped working");
         }
 
-        public  double RecieveWage()
+        public virtual double RecieveWage()
         {
             double wageBeforeTax = NumberOfHoursWorked * HourlyRate.Value;// value used because HourlyRate could be null
             double taxAmount = wageBeforeTax * taxRate;
@@ -173,5 +173,15 @@ namespace BethanysPieShopHRM.HR
             Console.WriteLine($"{FirstName} {LastName} recieves a generic bonus of $100!");
         }
 
+        public int CompareTo(object obj)// built in method for IComparable interface, -1, 0, +1 are all values that allow for item to be sorted
+        {
+            var otherEmployee = (Employee)obj;
+            if (Id > otherEmployee.Id)
+                return 1;
+            else if (Id < otherEmployee.Id)
+                return -1;
+            else
+                return 0;
+        }
     }
 }

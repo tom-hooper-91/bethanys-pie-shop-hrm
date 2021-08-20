@@ -12,11 +12,11 @@ namespace BethanysPieShopHRM
             Console.WriteLine("Creating an employee");
             Console.WriteLine("--------------------\n");
 
-            Manager bethany = new Manager("Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
-            StoreManager kevin = new StoreManager("Kevin", "Allan", "kevin@snowball.bn", new DateTime(1970, 4, 30), 35);
-            Developer tom = new Developer("Tom", "Hooper", "tom@hotmail.com", new DateTime(1991, 10, 30), 30);
-            Manager mary = new Manager("Mary", "Jones", "mary@snowball.be", new DateTime(1965, 1, 16), 30);
-            JuniorResearcher bobJunior = new JuniorResearcher("Bob", "Spencer", "bob@snowball.be", new DateTime(1988, 1, 23), 17);
+            Manager bethany = new Manager(776, "Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
+            StoreManager kevin = new StoreManager(1842, "Kevin", "Allan", "kevin@snowball.bn", new DateTime(1970, 4, 30), 35);
+            Developer tom = new Developer(33389, "Tom", "Hooper", "tom@hotmail.com", new DateTime(1991, 10, 30), 30);
+            Manager mary = new Manager(35476, "Mary", "Jones", "mary@snowball.be", new DateTime(1965, 1, 16), 30);
+            JuniorResearcher bobJunior = new JuniorResearcher(89765, "Bob", "Spencer", "bob@snowball.be", new DateTime(1988, 1, 23), 17);
 
             //Employee george = new Employee("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), 30);
 
@@ -59,7 +59,7 @@ namespace BethanysPieShopHRM
 
                 Console.WriteLine(employee.ToString());// this is inherited from System.Object
 
-                object o1 = new Manager("Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
+                object o1 = new Manager(89700, "Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
                 o1.ToString();// this only has access to base object functionality
             }
 
