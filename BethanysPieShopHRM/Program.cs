@@ -56,9 +56,12 @@ namespace BethanysPieShopHRM
                 employee.DisplayEmployeeDetails();
                 employee.GiveBonus();// this method will call the most specific method to the class, manager bonus will use override method
                 //employee.AttendManagementMeeting(); cannot call this method through an Employee reference
+
+                Console.WriteLine(employee.ToString());// this is inherited from System.Object
+
+                object o1 = new Manager("Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
+                o1.ToString();// this only has access to base object functionality
             }
-
-
 
             Console.ReadLine();
         }
