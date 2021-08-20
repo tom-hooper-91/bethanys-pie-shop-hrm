@@ -121,6 +121,7 @@ namespace BethanysPieShopHRM.HR
         // Constructors
         public Employee(int id, string first, string last, string em, DateTime bd, double? rate)
         {
+            Id = id;
             FirstName = first;
             LastName = last;
             Email = em;
