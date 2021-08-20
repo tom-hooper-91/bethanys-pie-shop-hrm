@@ -12,7 +12,7 @@ namespace BethanysPieShopHRM
             Console.WriteLine("Creating an employee");
             Console.WriteLine("--------------------\n");
 
-            Employee bethany = new Employee("Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
+            Manager bethany = new Manager("Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
             StoreManager kevin = new StoreManager("Kevin", "Allan", "kevin@snowball.bn", new DateTime(1970, 4, 30), 35);
             Developer tom = new Developer("Tom", "Hooper", "tom@hotmail.com", new DateTime(1991, 10, 30), 30);
             Manager mary = new Manager("Mary", "Jones", "mary@snowball.be", new DateTime(1965, 1, 16), 30);

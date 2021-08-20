@@ -20,5 +20,20 @@ namespace BethanysPieShopHRM.HR
             else
                 Console.WriteLine($"{FirstName} {LastName} recieves a generic bonus of $250!");
         }
+
+        public override double RecieveWage()
+        {
+            {
+                double wageBeforeTax = NumberOfHoursWorked * 2 * HourlyRate.Value;// value used because HourlyRate could be null
+                double taxAmount = wageBeforeTax * taxRate;
+
+                Wage = wageBeforeTax - taxAmount;
+
+                Console.WriteLine($"The wage for {NumberOfHoursWorked} hours worked is {Wage}.");
+                NumberOfHoursWorked = 0;
+
+                return Wage;
+            }
+        }
     }
 }
