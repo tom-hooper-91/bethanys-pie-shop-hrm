@@ -1,9 +1,10 @@
 ﻿using System;
 namespace BethanysPieShopHRM.HR
 {
-    public abstract class Employee// abstract keyword prevents you from creating an instance of this class
+    public class Employee : IEmployee
     {
         // Fields
+        private int id;
         private string firstName;
         private string lastName;
         private string email;
@@ -17,6 +18,15 @@ namespace BethanysPieShopHRM.HR
         public const double maxAmountOfHoursWorked = 1000;// constant variable that will never change, static by default
 
         // Properties
+        public int Id
+        {
+            get { return id; }
+            set
+            {
+                id = value;
+            }
+        }
+
         public string FirstName
         {
             get
@@ -135,7 +145,18 @@ namespace BethanysPieShopHRM.HR
             Console.WriteLine($"{FirstName} {LastName} has stopped working");
         }
 
-        public abstract double RecieveWage();// abstract methods have no body and can't be invoked, a derived class must define it or become abstract also
+        public  double RecieveWage()
+        {
+            double wageBeforeTax = NumberOfHoursWorked * HourlyRate.Value;// value used because HourlyRate could be null
+            double taxAmount = wageBeforeTax * taxRate;
+
+            Wage = wageBeforeTax - taxAmount;
+
+            Console.WriteLine($"The wage for {NumberOfHoursWorked} hours worked is {Wage}.");
+            NumberOfHoursWorked = 0;
+
+            return Wage;
+        }
 
         public void DisplayEmployeeDetails()
         {

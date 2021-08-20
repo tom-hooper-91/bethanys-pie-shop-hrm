@@ -3,7 +3,7 @@ namespace BethanysPieShopHRM.HR
 {
     public interface IEmployee// interface is similar to abstract class but can have multiple inheritance
     {
-        double ReceiveWage();
+        double RecieveWage();
 
         void GiveBonus();
 
